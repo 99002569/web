@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function selecthotel(){
+            tempH1='selected hotel is mayura';
+            tempH2='selected hotel is taj';
+            tempH3='selected hotel is ashoka';
+            tenpH4='selected hotel is petal';
+            if(sel.value=='hotel1'){
+                document.getElementById("mydiv").innerHTML=tempH1;
+            }
+            if(sel.value=='hotel2'){
+                document.getElementById("mydiv").innerHTML=tempH2;
+            }
+            if(sel.value=='hotel3'){
+                document.getElementById("mydiv").innerHTML=tempH3;
+            }
+            if(sel.value=='hotel4'){
+                document.getElementById("mydiv").innerHTML=tempH4;
+            }
+        }
+
+        function selectcity(){
+            tempC1='selected city is mysuru';
+            tempC2='selected hotel is bengaluru';
+            if(sel.value=='city1'){
+                document.getElementById("mydiv").innerHTML=tempC1;
+            }
+            if(sel.value=='city2'){
+                document.getElementById("mydiv").innerHTML=tempC2;
+            }
+        }
+
+        function selecttype(){
+            tempT1='selected hotel type is veg';
+            tempT2='selected hotel type is non-veg';
+            if(sel.value=='type1'){
+                document.getElementById("mydiv").innerHTML=tempT1;
+            }
+            if(sel.value=='type2'){
+                document.getElementById("mydiv").innerHTML=tempT2;
+            }
+        }
+
+        function selectcuisine(){
+            tempTCu1='selected cuisine is indian';
+            tempCu2='selected  type is chinese';
+            if(sel.value=='cuisine1'){
+                document.getElementById("mydiv").innerHTML=tempCu1;
+            }
+            if(sel.value=='cuisine2'){
+                document.getElementById("mydiv").innerHTML=tempCu2;
+            }
+        }
+
+      
+
+
+    </script>
+
+</head>
+<body>
+    Select hotel
+<select name="hotel" id="hotel" onclick="selecthotel()">
+<option value="select">--select--</option>
+<option value="hotel1">MAYURA</option>
+<option value="hotel2">TAJ</option>
+<option value="hotel3">ASHOKA</option>
+<option value="hotel4">PETAL</option>
+</select>
+
+Select city
+<select name="city" id="city" onclick="selectcity()">
+<option value="select">--select--</option>
+<option value="city1">MYSURU</option>
+<option value="city2">BENGALURU</option>
+</select>
+
+Select hotel type
+<select name="type" id="type" onclick="selecttype()">
+<option value="select">--select--</option>
+<option value="type1">VEG</option>
+<option value="type2">NON-VEG</option>
+</select>
+
+Select cuisine
+<select name="cuisine" id="cuisine" onclick="selectcuisine()">
+<option value="select">--select--</option>
+<option value="cuisine1">INDIAN</option>
+<option value="cuisine2">CHINESE</option>
+</select>
+
+<div style="background-color:aquamarine;" id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Dropdown</title>
+<script>
+function selectDevice(){
+arrl1 = 'Dell~Hp~Lenovo~Apple';
+ltemp = arrl1.split('~').join(" <br> ");
+arrt2 = 'Samsung~Sony~LG';
+ttemp = arrt2.split('~').join(" <br> ");
+arrm3 = 'Redmi~Samsung~Realme~Oppo';
+mtemp = arrm3.split('~').join(" <br> ");
+var sel = document.getElementById("mydevice");
+ 
+if(sel.value == 'Laptop'){
+document.getElementById("mydiv").innerHTML=ltemp;
+ }else if(sel.value == 'TV'){
+document.getElementById("mydiv").innerHTML=ttemp;
+ }else if(sel.value == 'Mobile'){
+document.getElementById("mydiv").innerHTML=mtemp;
+ }else{
+document.getElementById("mydiv").innerHTML="";
+ }
+ }
+</script>
+</head>
+<body>
+ Select Device
+<select name="device" id="mydevice" onclick="selectDevice()">
+<option value="select">--select--</option>
+<option value="Laptop">Laptop</option>
+<option value="TV">Television</option>
+<option value="Mobile">Mobile</option>
+</select>
+<div style="background-color:aquamarine;" id="mydiv"></div>
+</body>
+</html>
